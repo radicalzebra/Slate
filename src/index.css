@@ -9,7 +9,8 @@
   
 
   color-scheme: light dark;
-  background-color: #fffffff5;
+  background-color: #FAFBFC;
+
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,7 +20,6 @@
 
 * {
   margin: 0;
-  border: 0;
   box-sizing: border-box;
   font-size: 62.5%; 
   color:black;
