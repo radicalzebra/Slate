@@ -1,32 +1,40 @@
-import DropDown from "./components/DropDown";
-import TaskArrangementLayout from "./features/TaskBoard/components/TaskArrangementLayout";
-import TaskGroup from "./features/TaskBoard/components/TaskGroup";
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Task from "./pages/Task"
+import Layout from "./pages/Layout"
+import Login from "./pages/Login"
+
+
+
+
+
+const router = createBrowserRouter([
+  {
+    path:"/signup",
+    element:<Login/>
+  },
+
+  {
+    path:"/",
+    element:<Layout />,
+    errorElement:<p className="text-4xl">"Error"</p>,
+    children:[
+      {index:true,element:<Task/>},
+      {path:"dash",element:<Task/>},
+      {path:"notes",element:<Task/>},
+      {path:"task",element:<Task/>},
+      {path:"documents",element:<Task/>},
+      {path:"settings",element:<Task/>},
+      {path:"logout",element:<Task/>}
+    ]
+  }
+])
+
 
 
 function App() {
 
-
   return (
-    <> 
-    <div className="flex items-start">
-       <TaskArrangementLayout/>
-
-       <div className="w-80 m-4 ">
-         <DropDown heading="Filter" >
-            <DropDown.Option text={"Priority"}/>
-            <DropDown.Option text={"New"}/>
-            <DropDown.Option text={"Deadline"}/>
-            <DropDown.Option text={"Working"}/>
-         </DropDown>
-       </div>
-    </div>
-
-   <div className="flex">
-    <TaskGroup/>
-    <TaskGroup/>
-    <TaskGroup/>
-   </div>
-    </>
+    <RouterProvider router={router} />
   )
 }
 

@@ -1,15 +1,16 @@
 type TaskGroupHeaderProps = {
+  title:string
   numberOfTask:string
 }
 
-export default function TaskGroupHeader({numberOfTask}:TaskGroupHeaderProps) {
+export default function TaskGroupHeader({numberOfTask,title}:TaskGroupHeaderProps) {
   return (
     <header className='mb-4'>
 
       <section className='flex items-center justify-between'>
 
        <div className="flex items-center gap-2">
-          <p className='text-xl font-semibold text-gray-400 p-3 px-1'>In progress</p>
+          <p className='text-xl font-semibold text-gray-400 p-3 px-1'>{title}</p>
           <p className="text-lg  px-2 font-medium text-gray-600 shadow-sm shadow-gray-200 rounded-lg">{numberOfTask}</p>
        </div>  
 

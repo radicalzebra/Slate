@@ -3,6 +3,7 @@ import  React, { type ReactNode , useState, type ComponentPropsWithoutRef } from
 type DropDownProps = {
    heading:string
    children:ReactNode
+   className?:string
 }
 
 type DropDownOptionProps = {
@@ -27,7 +28,7 @@ const DropDownOption = ({text,className,onSelectValue,closeDropDown,onClick,...p
    )
 }
 
-export default function DropDown({heading,children}:DropDownProps) {
+export default function DropDown({heading,children,className}:DropDownProps) {
   const [showList,setShowList] = useState(false) 
   const [value,setValue] = useState("")
 
@@ -44,8 +45,8 @@ export default function DropDown({heading,children}:DropDownProps) {
   }
 
   return (
-    <section className={`select-none flex flex-col  `}>
-      <div className={`flex items-center justify-between font-semibold  p-4 border-gray-300 border-2 ${showList ? "rounded-t-2xl border-b-0":" rounded-2xl"} min-w-fit transition-all`} onClick={onClickHandler}>
+    <section className={`select-none min-w-fit w-60 flex flex-col  bg-red-90  ${className} `}>
+      <div className={`flex items-center justify-between font-semibold  p-4 border-gray-300 border-2 ${showList ? "rounded-t-2xl border-b-0":" rounded-xl"} min-w-fit transition-all`} onClick={onClickHandler}>
          <h3 className='text-2xl text-gray-950 font-semibold '>{value !== "" ? value:heading}</h3>
          <div className={` flex flex-col ${showList && " scale-105 "}`} >
           <p className='text-gray-400 text-xs font-semibold'>{"▲"}</p>

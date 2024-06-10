@@ -17,7 +17,7 @@ export type TaskProps = {
 
 export default function ({title,date,priority,className,...props}:TaskProps) {
   return (
-    <div className={` border-2 border-gray-200 min-h-56 h-fit p-3 min-w-fit flex flex-col justify-between gap-12 rounded-xl cursor-default select-none ${className}`} {...props}>
+    <div className={` border-2 border-gray-200 min-h-56 h-fit p-3  min-w-fit  flex flex-col justify-between gap-12 rounded-xl cursor-default select-none ${className}`} {...props}>
 
       <section className='flex flex-col gap-6'>
          <h3 className='text-2xl  font-semibold'>{title}</h3>
