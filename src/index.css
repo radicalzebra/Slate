@@ -24,3 +24,8 @@
   font-size: 62.5%; 
   color:black;
 }
+
+
+::-webkit-scrollbar {
+  display: none;
+}

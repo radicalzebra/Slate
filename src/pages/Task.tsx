@@ -14,7 +14,7 @@ export default function Task() {
       <TaskHeader className="w-full absolute top-3"/>
     </div>
 
-    <div className="flex gap-3">
+    <div className="flex gap-5">
       <TaskBody/>
       <TaskBody/>
       <TaskBody/>

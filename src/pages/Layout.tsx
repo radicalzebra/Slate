@@ -16,6 +16,7 @@ import signOut from "../features/Auth/lib/signOut"
 export default function Layout() {
     
   
+  
   return (
     
     <SplitScreen className="flex gap-8 ">
