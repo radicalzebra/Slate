@@ -1,4 +1,4 @@
-import {Outlet, useNavigate } from "react-router-dom"
+import {Outlet} from "react-router-dom"
 import SplitScreen from "../layouts/SplitScreen"
 import Navigations from "../components/Navigations"
 import MyNavLink from "../components/MyNavLink"
