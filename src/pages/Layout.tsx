@@ -51,7 +51,7 @@ export default function Layout() {
                 Settings
               </Navigations.Item>
 
-              <Navigations.Item to={"/signup"} onClick={signOut}>
+              <Navigations.Item to={"/auth"} onClick={signOut}>
                 <Icon src={logoutSvg}/>
                 Logout
               </Navigations.Item>

@@ -1,6 +1,6 @@
 import {useAuthState} from "react-firebase-hooks/auth"
 import {auth , type AuthType} from "../lib/firebase"
-import { type UserLoginType } from "../utils/defaultTypes"
+import { type UserLoginType } from "../../../utils/Types"
 
 export default function UseIsAuthenticated() {
 

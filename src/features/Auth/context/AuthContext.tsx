@@ -1,6 +1,6 @@
 import { type ReactNode, createContext} from "react";
 import UseIsAuthenticated from "../hooks/IsAuthenticated";
-import { UserLoginType } from "../utils/defaultTypes";
+import { UserLoginType } from "../../../utils/Types";
 
 export const AuthContext = createContext<UserLoginType | null>(null)
 

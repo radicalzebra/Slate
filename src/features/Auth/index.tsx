@@ -1,3 +1,5 @@
-import Log from "./components/Log";
+import LoginAction from './components/LoginAction';
+import LoginBackgroundVideo from './components/LoginBackgroundVideo';
 
-export {Log}
+
+export {LoginAction,LoginBackgroundVideo as LoginBgVideo}

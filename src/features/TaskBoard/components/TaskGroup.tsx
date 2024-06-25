@@ -7,7 +7,7 @@ export default function TaskGroup() {
     <main className={` flex flex-col gap-2  mb-20`}>
       <TaskGroupHeader title='In progress' numberOfTask='4'/>
       <TaskSection/>
-      <AddTaskToGroup/>
+      {/* <AddTaskToGroup/> */}
     </main>
   )
 }
